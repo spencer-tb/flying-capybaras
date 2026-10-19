@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7cc8f4"/>
+      <stop offset="1" stop-color="#e6f6ff"/>
+    </linearGradient>
+    <radialGradient id="water" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#8ad8f7"/>
+      <stop offset="1" stop-color="#3fa7dc"/>
+    </radialGradient>
+    <radialGradient id="fur" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#b07a45"/>
+      <stop offset="1" stop-color="#8a5a2e"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="705" cy="80" r="46" fill="#ffe27a"/>
+  <circle cx="705" cy="80" r="62" fill="#ffe27a" opacity="0.25"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.95">
+    <circle cx="120" cy="90" r="28"/><circle cx="150" cy="78" r="34"/>
+    <circle cx="185" cy="92" r="26"/><rect x="100" y="90" width="110" height="26" rx="13"/>
+    <circle cx="560" cy="60" r="20"/><circle cx="585" cy="50" r="26"/>
+    <circle cx="612" cy="62" r="19"/><rect x="545" y="60" width="85" height="20" rx="10"/>
+    <circle cx="90" cy="360" r="22"/><circle cx="118" cy="350" r="28"/>
+    <circle cx="146" cy="362" r="20"/><rect x="72" y="362" width="92" height="20" rx="10"/>
+  </g>
+
+  <!-- speed lines -->
+  <g stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.85">
+    <line x1="40" y1="215" x2="150" y2="215"/>
+    <line x1="70" y1="248" x2="165" y2="248"/>
+    <line x1="30" y1="281" x2="140" y2="281"/>
+  </g>
+
+  <!-- blob schedule: up, then back down -->
+  <rect x="430" y="474" width="260" height="4" rx="2" fill="#33415c" opacity="0.5"/>
+  <path d="M 500 380 L 530 352 M 590 352 L 620 380" stroke="#33415c" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M 522 350 L 532 350 L 532 360 M 612 380 L 622 380 L 622 370" stroke="#33415c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6"/>
+  <g>
+    <circle cx="470" cy="455" r="15" fill="#8b5cf6" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="470" cy="421" r="15" fill="#8b5cf6" stroke="#ffffff" stroke-width="3"/>
+    <text x="470" y="490" font-family="Verdana, sans-serif" font-size="15" font-weight="bold" fill="#33415c" text-anchor="middle">14</text>
+    <circle cx="560" cy="455" r="15" fill="#22c55e" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="560" cy="421" r="15" fill="#22c55e" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="560" cy="387" r="15" fill="#22c55e" stroke="#ffffff" stroke-width="3"/>
+    <text x="560" y="490" font-family="Verdana, sans-serif" font-size="15" font-weight="bold" fill="#33415c" text-anchor="middle">21</text>
+    <circle cx="650" cy="455" r="15" fill="#f59e0b" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="650" cy="421" r="15" fill="#f59e0b" stroke="#ffffff" stroke-width="3"/>
+    <text x="650" y="490" font-family="Verdana, sans-serif" font-size="15" font-weight="bold" fill="#33415c" text-anchor="middle">14</text>
+  </g>
+  <rect x="712" y="398" width="10" height="80" fill="#7a4e26"/>
+  <rect x="664" y="368" width="106" height="40" rx="6" fill="#c08a4d" stroke="#7a4e26" stroke-width="4"/>
+  <text x="717" y="395" font-family="Verdana, sans-serif" font-size="19" font-weight="bold" fill="#4a2c12" text-anchor="middle">BPO</text>
+
+  <g transform="rotate(-8 380 230)">
+    <!-- back wing -->
+    <path d="M 365 172 C 335 112 285 62 222 58 C 250 76 252 88 238 99 C 270 103 280 114 266 127 C 298 130 306 142 294 156 C 322 156 340 165 352 182 Z"
+          fill="#e7eef6" stroke="#c3cfdc" stroke-width="3"/>
+
+    <!-- legs -->
+    <g fill="#7c5029">
+      <rect x="262" y="290" width="28" height="44" rx="13"/>
+      <rect x="306" y="296" width="28" height="44" rx="13"/>
+      <rect x="392" y="296" width="28" height="44" rx="13"/>
+      <rect x="432" y="288" width="28" height="44" rx="13"/>
+    </g>
+
+    <!-- body -->
+    <ellipse cx="350" cy="240" rx="152" ry="84" fill="url(#fur)"/>
+    <ellipse cx="365" cy="282" rx="108" ry="36" fill="#bf8b55" opacity="0.7"/>
+    <path d="M 250 200 q 12 -10 24 0 M 300 180 q 12 -10 24 0 M 230 245 q 12 -10 24 0" stroke="#7c5029" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- scarf tail, streaming back over the shoulders -->
+    <path d="M 446 206 C 400 178 360 196 318 176 C 300 168 284 150 262 146 C 280 166 296 184 318 196 C 360 214 404 222 446 230 Z" fill="#e63946"/>
+    <path d="M 268 150 L 252 140 M 276 162 L 258 156 M 284 172 L 268 170" stroke="#e63946" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- head -->
+    <rect x="428" y="148" width="142" height="118" rx="48" fill="url(#fur)"/>
+    <rect x="518" y="182" width="80" height="80" rx="32" fill="#8d5d30"/>
+    <!-- ear -->
+    <circle cx="468" cy="150" r="17" fill="#7c5029"/>
+    <circle cx="468" cy="151" r="8" fill="#55341a"/>
+    <!-- scarf knot -->
+    <rect x="424" y="200" width="26" height="62" rx="10" fill="#e63946"/>
+    <!-- goggles -->
+    <path d="M 452 168 L 560 158" stroke="#4a4a4a" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="492" cy="164" r="15" fill="#a8e6ff" stroke="#4a4a4a" stroke-width="5"/>
+    <circle cx="528" cy="160" r="15" fill="#a8e6ff" stroke="#4a4a4a" stroke-width="5"/>
+    <circle cx="487" cy="159" r="4" fill="#ffffff"/>
+    <circle cx="523" cy="155" r="4" fill="#ffffff"/>
+    <!-- eye -->
+    <ellipse cx="530" cy="194" rx="7" ry="8.5" fill="#1d120a"/>
+    <circle cx="532.5" cy="191" r="2.6" fill="#ffffff"/>
+    <!-- nose and mouth -->
+    <ellipse cx="588" cy="204" rx="10" ry="7" fill="#3b2614"/>
+    <path d="M 566 240 q 11 9 24 0" stroke="#3b2614" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="545" cy="228" rx="13" ry="7.5" fill="#f08c8c" opacity="0.55"/>
+
+    <!-- front wing -->
+    <path d="M 345 176 C 305 116 248 74 178 76 C 208 92 212 104 196 116 C 232 118 242 130 226 143 C 262 145 272 157 258 171 C 290 170 316 176 338 192 Z"
+          fill="#ffffff" stroke="#c3cfdc" stroke-width="3"/>
+    <path d="M 300 150 C 270 130 240 118 210 112 M 312 166 C 282 152 262 146 236 141" stroke="#d5dee8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- blob balloons, held in front paws -->
+    <path d="M 590 288 Q 604 200 612 140" stroke="#6b7280" stroke-width="2" fill="none"/>
+    <path d="M 590 288 Q 642 178 650 118" stroke="#6b7280" stroke-width="2" fill="none"/>
+    <path d="M 590 288 Q 680 208 688 148" stroke="#6b7280" stroke-width="2" fill="none"/>
+    <path d="M 590 288 Q 628 230 636 170" stroke="#6b7280" stroke-width="2" fill="none"/>
+    <path d="M 590 288 Q 668 248 676 188" stroke="#6b7280" stroke-width="2" fill="none"/>
+    <circle cx="612" cy="120" r="20" fill="#8b5cf6" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="605" cy="113" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="650" cy="98" r="20" fill="#22c55e" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="643" cy="91" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="688" cy="128" r="20" fill="#f59e0b" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="681" cy="121" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="636" cy="150" r="20" fill="#ec4899" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="629" cy="143" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="676" cy="168" r="20" fill="#0ea5e9" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="669" cy="161" r="5" fill="#ffffff" opacity="0.6"/>
+    <ellipse cx="550" cy="282" rx="13" ry="9" fill="#7c5029"/>
+    <ellipse cx="612" cy="300" rx="13" ry="9" fill="#7c5029"/>
+  </g>
+</svg>
