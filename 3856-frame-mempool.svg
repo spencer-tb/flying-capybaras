@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b4b9a"/>
+      <stop offset="0.55" stop-color="#f08a6c"/>
+      <stop offset="1" stop-color="#ffd59e"/>
+    </linearGradient>
+    <radialGradient id="fur" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#b07a45"/>
+      <stop offset="1" stop-color="#8a5a2e"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7d774"/>
+      <stop offset="1" stop-color="#c9952a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- setting sun and hills -->
+  <circle cx="140" cy="420" r="70" fill="#ffe08a" opacity="0.9"/>
+  <path d="M 0 440 C 120 400 220 420 330 445 C 450 470 560 410 800 430 L 800 500 L 0 500 Z" fill="#6d4a7d"/>
+  <path d="M 0 470 C 160 450 300 480 420 470 C 560 458 680 480 800 465 L 800 500 L 0 500 Z" fill="#4a3360"/>
+
+  <!-- stars -->
+  <g fill="#fff6d8">
+    <circle cx="80" cy="40" r="2.5"/><circle cx="210" cy="70" r="2"/>
+    <circle cx="330" cy="30" r="2.5"/><circle cx="470" cy="55" r="2"/>
+    <circle cx="610" cy="25" r="2.5"/><circle cx="740" cy="60" r="2"/>
+  </g>
+
+  <!-- the verify gas gauge -->
+  <g transform="translate(712 318) scale(0.84)">
+    <rect x="-8" y="10" width="16" height="135" fill="#3b2a4d"/>
+    <path d="M -95 0 A 95 95 0 0 1 95 0 Z" fill="#fffaf0" stroke="#3b2a4d" stroke-width="6"/>
+    <path d="M -80 0 A 80 80 0 0 1 40 -69.3" fill="none" stroke="#4caf50" stroke-width="14"/>
+    <path d="M 40 -69.3 A 80 80 0 0 1 80 0" fill="none" stroke="#e63946" stroke-width="14"/>
+    <line x1="0" y1="0" x2="-30" y2="-62" stroke="#3b2a4d" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="9" fill="#3b2a4d"/>
+    <rect x="-92" y="12" width="184" height="30" rx="6" fill="#3b2a4d"/>
+    <text x="0" y="33" font-family="Verdana, sans-serif" font-size="15" font-weight="bold" fill="#fffaf0" text-anchor="middle">MAX_VERIFY_GAS</text>
+  </g>
+
+  <!-- speed lines -->
+  <g stroke="#fff3e0" stroke-width="7" stroke-linecap="round" opacity="0.8">
+    <line x1="20" y1="190" x2="120" y2="190"/>
+    <line x1="45" y1="225" x2="135" y2="225"/>
+    <line x1="10" y1="260" x2="110" y2="260"/>
+  </g>
+
+  <g transform="translate(-75 -15) rotate(-6 380 230)">
+    <!-- back wing -->
+    <path d="M 365 172 C 335 112 285 62 222 58 C 250 76 252 88 238 99 C 270 103 280 114 266 127 C 298 130 306 142 294 156 C 322 156 340 165 352 182 Z"
+          fill="#e7eef6" stroke="#c3cfdc" stroke-width="3"/>
+
+    <!-- legs -->
+    <g fill="#7c5029">
+      <rect x="262" y="290" width="28" height="44" rx="13"/>
+      <rect x="306" y="296" width="28" height="44" rx="13"/>
+      <rect x="392" y="296" width="28" height="44" rx="13"/>
+      <rect x="432" y="288" width="28" height="44" rx="13"/>
+    </g>
+
+    <!-- body -->
+    <ellipse cx="350" cy="240" rx="152" ry="84" fill="url(#fur)"/>
+    <ellipse cx="365" cy="282" rx="108" ry="36" fill="#bf8b55" opacity="0.7"/>
+    <path d="M 250 200 q 12 -10 24 0 M 300 180 q 12 -10 24 0 M 230 245 q 12 -10 24 0" stroke="#7c5029" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- head -->
+    <rect x="428" y="148" width="142" height="118" rx="48" fill="url(#fur)"/>
+    <rect x="518" y="182" width="80" height="80" rx="32" fill="#8d5d30"/>
+    <circle cx="468" cy="150" r="17" fill="#7c5029"/>
+    <circle cx="468" cy="151" r="8" fill="#55341a"/>
+    <!-- little aviator cap -->
+    <path d="M 440 168 C 450 120 540 112 566 160 Z" fill="#5b4b9a"/>
+    <rect x="436" y="160" width="134" height="12" rx="6" fill="#463a7a"/>
+    <!-- eye, nose, mouth -->
+    <ellipse cx="530" cy="196" rx="7" ry="8.5" fill="#1d120a"/>
+    <circle cx="532.5" cy="193" r="2.6" fill="#ffffff"/>
+    <ellipse cx="588" cy="206" rx="10" ry="7" fill="#3b2614"/>
+    <path d="M 566 242 q 11 9 24 0" stroke="#3b2614" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="545" cy="230" rx="13" ry="7.5" fill="#f08c8c" opacity="0.55"/>
+
+    <!-- front wing -->
+    <path d="M 345 176 C 305 116 248 74 178 76 C 208 92 212 104 196 116 C 232 118 242 130 226 143 C 262 145 272 157 258 171 C 290 170 316 176 338 192 Z"
+          fill="#ffffff" stroke="#c3cfdc" stroke-width="3"/>
+    <path d="M 300 150 C 270 130 240 118 210 112 M 312 166 C 282 152 262 146 236 141" stroke="#d5dee8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- the frame transaction: a picture frame held in the front paws -->
+    <g transform="rotate(8 600 300)">
+      <rect x="548" y="250" width="104" height="84" rx="4" fill="url(#gold)" stroke="#8a6a00" stroke-width="3"/>
+      <rect x="562" y="264" width="76" height="56" fill="#fffdf4" stroke="#8a6a00" stroke-width="2"/>
+      <text x="600" y="287" font-family="Verdana, sans-serif" font-size="13" font-weight="bold" fill="#8a6a00" text-anchor="middle">VERIFY</text>
+      <text x="600" y="308" font-family="Verdana, sans-serif" font-size="13" font-weight="bold" fill="#8a6a00" text-anchor="middle">SENDER</text>
+    </g>
+    <ellipse cx="552" cy="300" rx="13" ry="9" fill="#7c5029"/>
+    <ellipse cx="640" cy="330" rx="13" ry="9" fill="#7c5029"/>
+  </g>
+</svg>
