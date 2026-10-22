@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9d6ff"/>
+      <stop offset="1" stop-color="#f4f6ff"/>
+    </linearGradient>
+    <radialGradient id="fur" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#b07a45"/>
+      <stop offset="1" stop-color="#8a5a2e"/>
+    </radialGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e3ecf5"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e8f6ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#bfe3f7" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6d365"/>
+      <stop offset="1" stop-color="#c99a1e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- setting sun -->
+  <circle cx="120" cy="110" r="48" fill="#ffd166"/>
+  <circle cx="120" cy="110" r="70" fill="#ffd166" opacity="0.2"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.9">
+    <circle cx="610" cy="80" r="22"/><circle cx="638" cy="68" r="28"/>
+    <circle cx="668" cy="82" r="20"/><rect x="592" y="80" width="96" height="22" rx="11"/>
+    <circle cx="90" cy="420" r="18"/><circle cx="114" cy="410" r="24"/>
+    <circle cx="138" cy="422" r="16"/><rect x="74" y="422" width="80" height="16" rx="8"/>
+  </g>
+
+  <!-- speed lines -->
+  <g stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.9">
+    <line x1="30" y1="230" x2="130" y2="230"/>
+    <line x1="50" y1="262" x2="160" y2="262"/>
+    <line x1="40" y1="294" x2="120" y2="294"/>
+  </g>
+
+  <!-- capybara -->
+  <g transform="translate(160 150) rotate(6)">
+    <path d="M150 40 C120 -40 40 -50 20 -20 C60 -10 90 10 120 50 Z" fill="url(#wing)" stroke="#b9cde0" stroke-width="3"/>
+    <ellipse cx="160" cy="100" rx="130" ry="72" fill="url(#fur)"/>
+    <ellipse cx="90" cy="160" rx="22" ry="14" fill="#7a4e27"/>
+    <ellipse cx="210" cy="164" rx="22" ry="14" fill="#7a4e27"/>
+    <ellipse cx="282" cy="78" rx="66" ry="52" fill="url(#fur)"/>
+    <rect x="300" y="60" width="62" height="54" rx="26" fill="#8f5f31"/>
+    <ellipse cx="350" cy="80" rx="7" ry="5" fill="#3b2412"/>
+    <ellipse cx="236" cy="34" rx="14" ry="10" fill="#7a4e27"/>
+    <circle cx="282" cy="62" r="7" fill="#2b1a0c"/>
+    <circle cx="284" cy="60" r="2.5" fill="#ffffff"/>
+    <path d="M330 102 q10 8 22 0" fill="none" stroke="#3b2412" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="262" cy="92" rx="10" ry="6" fill="#e59a8c" opacity="0.6"/>
+    <path d="M140 70 C110 -30 10 -30 -10 10 C40 20 80 40 110 90 Z" fill="url(#wing)" stroke="#b9cde0" stroke-width="3"/>
+    <path d="M30 0 C60 10 85 30 105 60" fill="none" stroke="#c8d8e8" stroke-width="3"/>
+  </g>
+
+  <!-- SENDALL sign held from the paw -->
+  <line x1="380" y1="320" x2="430" y2="350" stroke="#6b4a2b" stroke-width="3"/>
+  <g transform="translate(410 345) rotate(-4)">
+    <rect x="0" y="0" width="210" height="70" rx="10" fill="#ffffff" stroke="#4a5bb5" stroke-width="5"/>
+    <text x="105" y="47" font-family="Menlo, monospace" font-size="34" font-weight="700" fill="#3a4a9f" text-anchor="middle">SENDALL</text>
+  </g>
+  <!-- old SELFDESTRUCT tag drifting away, crossed out -->
+  <g transform="translate(560 140) rotate(10)" opacity="0.85">
+    <rect x="0" y="0" width="200" height="46" rx="6" fill="#fffaf0" stroke="#c9b48a" stroke-width="3"/>
+    <text x="100" y="31" font-family="Menlo, monospace" font-size="22" font-weight="700" fill="#8a5a2e" text-anchor="middle">SELFDESTRUCT</text>
+    <line x1="8" y1="38" x2="192" y2="8" stroke="#d1495b" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#ffffff">
+    <path d="M500 150 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5 z"/>
+    <path d="M720 230 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 l9 -4 z"/>
+  </g>
+</svg>
