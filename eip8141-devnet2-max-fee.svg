@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9ed8f5"/>
+      <stop offset="1" stop-color="#eef8ff"/>
+    </linearGradient>
+    <radialGradient id="fur" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#b07a45"/>
+      <stop offset="1" stop-color="#8a5a2e"/>
+    </radialGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbe9f5"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e8f6ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#bfe3f7" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="690" cy="85" r="44" fill="#ffe27a"/>
+  <circle cx="690" cy="85" r="62" fill="#ffe27a" opacity="0.25"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.95">
+    <circle cx="110" cy="80" r="24"/><circle cx="140" cy="68" r="30"/>
+    <circle cx="172" cy="82" r="22"/><rect x="90" y="80" width="100" height="24" rx="12"/>
+    <circle cx="520" cy="420" r="20"/><circle cx="546" cy="410" r="26"/>
+    <circle cx="572" cy="422" r="18"/><rect x="502" y="422" width="88" height="18" rx="9"/>
+  </g>
+
+  <!-- speed lines -->
+  <g stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.9">
+    <line x1="40" y1="250" x2="140" y2="250"/>
+    <line x1="60" y1="282" x2="170" y2="282"/>
+    <line x1="50" y1="314" x2="130" y2="314"/>
+  </g>
+
+  <!-- capybara -->
+  <g transform="translate(170 170) rotate(-5)">
+    <path d="M150 40 C120 -40 40 -50 20 -20 C60 -10 90 10 120 50 Z" fill="url(#wing)" stroke="#b9cde0" stroke-width="3"/>
+    <ellipse cx="160" cy="100" rx="130" ry="72" fill="url(#fur)"/>
+    <ellipse cx="90" cy="160" rx="22" ry="14" fill="#7a4e27"/>
+    <ellipse cx="210" cy="164" rx="22" ry="14" fill="#7a4e27"/>
+    <ellipse cx="282" cy="78" rx="66" ry="52" fill="url(#fur)"/>
+    <rect x="300" y="60" width="62" height="54" rx="26" fill="#8f5f31"/>
+    <ellipse cx="350" cy="80" rx="7" ry="5" fill="#3b2412"/>
+    <ellipse cx="236" cy="34" rx="14" ry="10" fill="#7a4e27"/>
+    <circle cx="282" cy="62" r="7" fill="#2b1a0c"/>
+    <circle cx="284" cy="60" r="2.5" fill="#ffffff"/>
+    <path d="M330 102 q10 8 22 0" fill="none" stroke="#3b2412" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="262" cy="92" rx="10" ry="6" fill="#e59a8c" opacity="0.6"/>
+    <path d="M140 70 C110 -30 10 -30 -10 10 C40 20 80 40 110 90 Z" fill="url(#wing)" stroke="#b9cde0" stroke-width="3"/>
+    <path d="M30 0 C60 10 85 30 105 60" fill="none" stroke="#c8d8e8" stroke-width="3"/>
+  </g>
+
+  <!-- one budget jar, carried on a string -->
+  <line x1="470" y1="300" x2="560" y2="330" stroke="#6b4a2b" stroke-width="3"/>
+  <g transform="translate(540 320)">
+    <rect x="0" y="16" width="120" height="120" rx="18" fill="url(#glass)" stroke="#7fb3d1" stroke-width="4"/>
+    <rect x="-6" y="0" width="132" height="24" rx="8" fill="#d9a441" stroke="#a87a24" stroke-width="3"/>
+    <g fill="#f2c94c" stroke="#c99a1e" stroke-width="2">
+      <ellipse cx="38" cy="118" rx="22" ry="8"/><ellipse cx="82" cy="118" rx="22" ry="8"/>
+      <ellipse cx="60" cy="106" rx="22" ry="8"/><ellipse cx="40" cy="94" rx="22" ry="8"/>
+      <ellipse cx="80" cy="94" rx="22" ry="8"/>
+    </g>
+    <rect x="16" y="44" width="88" height="30" rx="6" fill="#ffffff" stroke="#7fb3d1" stroke-width="2"/>
+    <text x="60" y="65" font-family="Menlo, monospace" font-size="17" font-weight="700" fill="#2c5d7c" text-anchor="middle">max_fee</text>
+  </g>
+
+  <!-- signature tag carrying only its length -->
+  <g transform="translate(560 190) rotate(8)">
+    <rect x="0" y="0" width="90" height="46" rx="6" fill="#fffaf0" stroke="#c9b48a" stroke-width="3"/>
+    <text x="45" y="30" font-family="Menlo, monospace" font-size="18" font-weight="700" fill="#8a5a2e" text-anchor="middle">len 65</text>
+  </g>
+  <line x1="545" y1="248" x2="565" y2="225" stroke="#c9b48a" stroke-width="3"/>
+
+  <!-- sparkles -->
+  <g fill="#ffffff">
+    <path d="M470 120 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5 z"/>
+    <path d="M730 250 l4 9 l9 4 l-9 4 l-4 9 l-4 -9 l-9 -4 l9 -4 z"/>
+  </g>
+</svg>
