@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9e7ff"/>
+      <stop offset="1" stop-color="#f4fbff"/>
+    </linearGradient>
+    <radialGradient id="fur" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#b47d48"/>
+      <stop offset="1" stop-color="#8a5a2e"/>
+    </radialGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e1eaf4"/>
+    </linearGradient>
+    <linearGradient id="coin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8d96a"/>
+      <stop offset="1" stop-color="#cf9f22"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="700" cy="80" r="40" fill="#ffd36e"/>
+  <circle cx="700" cy="80" r="60" fill="#ffd36e" opacity="0.25"/>
+
+  <g fill="#ffffff" opacity="0.95">
+    <circle cx="110" cy="80" r="20"/><circle cx="136" cy="70" r="26"/>
+    <circle cx="164" cy="82" r="18"/><rect x="94" y="80" width="88" height="20" rx="10"/>
+  </g>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Menlo, monospace" font-size="20" font-weight="700" fill="#2c5d7c">EIP-4758 SENDALL in EIP-8141 frames</text>
+
+  <!-- three frames on the ground -->
+  <g font-family="Menlo, monospace" font-weight="700" text-anchor="middle">
+    <g transform="translate(70 360)">
+      <rect width="180" height="100" rx="12" fill="#fde2e2" stroke="#e5484d" stroke-width="4"/>
+      <text x="90" y="34" font-size="18" fill="#7a2a2c">VERIFY</text>
+      <text x="90" y="52" font-size="12" fill="#7a2a2c">static</text>
+      <!-- padlock -->
+      <rect x="74" y="72" width="32" height="22" rx="4" fill="#e5484d"/>
+      <path d="M80 72 v-4 a10 10 0 0 1 20 0 v4" fill="none" stroke="#e5484d" stroke-width="4"/>
+    </g>
+    <g transform="translate(310 360)">
+      <rect width="180" height="100" rx="12" fill="#e3f4e8" stroke="#3f9b5a" stroke-width="4"/>
+      <text x="90" y="34" font-size="18" fill="#1f5a32">SENDER</text>
+      <text x="90" y="56" font-size="12" fill="#1f5a32">swept, code kept</text>
+      <rect x="62" y="68" width="56" height="20" rx="4" fill="#3f9b5a" opacity="0.35"/>
+      <text x="90" y="83" font-size="11" fill="#1f5a32">code</text>
+    </g>
+    <g transform="translate(550 360)">
+      <rect width="180" height="100" rx="12" fill="#e6eefc" stroke="#4a6fd1" stroke-width="4"/>
+      <text x="90" y="34" font-size="18" fill="#22397a">DEFAULT</text>
+      <text x="90" y="56" font-size="12" fill="#22397a">batch unrolled</text>
+      <!-- rewind arrow -->
+      <path d="M120 80 a26 14 0 1 0 -60 0" fill="none" stroke="#4a6fd1" stroke-width="4"/>
+      <path d="M52 74 l8 10 l8 -10 z" fill="#4a6fd1"/>
+    </g>
+  </g>
+
+  <!-- coins flying out of SENDER frame -->
+  <g stroke="#b8891a" stroke-width="2" fill="url(#coin)">
+    <ellipse cx="420" cy="330" rx="13" ry="5"/>
+    <ellipse cx="450" cy="310" rx="13" ry="5"/>
+    <ellipse cx="486" cy="294" rx="13" ry="5"/>
+  </g>
+
+  <!-- flying capybara with a broom -->
+  <g transform="translate(250 130)">
+    <path d="M70 40 C 20 -40, -50 -20, -40 30 C 0 20, 30 30, 70 50 Z" fill="url(#wing)" stroke="#b9c7d6" stroke-width="3"/>
+    <path d="M150 40 C 200 -40, 270 -20, 260 30 C 220 20, 190 30, 150 50 Z" fill="url(#wing)" stroke="#b9c7d6" stroke-width="3"/>
+    <ellipse cx="110" cy="80" rx="95" ry="58" fill="url(#fur)"/>
+    <ellipse cx="205" cy="62" rx="48" ry="40" fill="url(#fur)"/>
+    <rect x="222" y="48" width="34" height="34" rx="14" fill="#7a4f28"/>
+    <circle cx="198" cy="48" r="6" fill="#2b1a0e"/>
+    <circle cx="200" cy="46" r="2" fill="#ffffff"/>
+    <ellipse cx="176" cy="30" rx="9" ry="7" fill="#7a4f28"/>
+    <circle cx="246" cy="60" r="3" fill="#2b1a0e"/>
+    <path d="M232 76 q 8 6 16 0" stroke="#2b1a0e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <rect x="50" y="122" width="18" height="26" rx="8" fill="#7a4f28"/>
+    <rect x="150" y="122" width="18" height="26" rx="8" fill="#7a4f28"/>
+    <!-- broom -->
+    <line x1="170" y1="120" x2="215" y2="215" stroke="#8b5e34" stroke-width="7" stroke-linecap="round"/>
+    <path d="M200 205 L 238 222 L 226 250 L 186 236 Z" fill="#e7c36b" stroke="#b8891a" stroke-width="3"/>
+    <text x="110" y="88" text-anchor="middle" font-family="Menlo, monospace" font-size="15" font-weight="700" fill="#fff4e0">SENDALL</text>
+  </g>
+</svg>
