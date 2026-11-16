@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fc8ff"/>
+      <stop offset="0.6" stop-color="#cfe8ff"/>
+      <stop offset="1" stop-color="#f2f9ff"/>
+    </linearGradient>
+    <radialGradient id="fur" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#b07a45"/>
+      <stop offset="1" stop-color="#8a5a2e"/>
+    </radialGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fbf6a"/>
+      <stop offset="1" stop-color="#4f9a4a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe27a"/>
+      <stop offset="1" stop-color="#d9a520"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="690" cy="85" r="46" fill="#fff3a8"/>
+  <circle cx="690" cy="85" r="66" fill="#fff3a8" opacity="0.35"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.95">
+    <circle cx="120" cy="80" r="22"/><circle cx="148" cy="66" r="28"/>
+    <circle cx="178" cy="80" r="21"/><rect x="104" y="80" width="92" height="20" rx="10"/>
+    <circle cx="470" cy="60" r="20"/><circle cx="496" cy="50" r="25"/>
+    <circle cx="524" cy="62" r="19"/><rect x="454" y="62" width="88" height="18" rx="9"/>
+  </g>
+
+  <!-- hills -->
+  <path d="M0 420 Q160 360 330 405 T650 390 T800 410 V500 H0 Z" fill="url(#hill)"/>
+  <path d="M0 455 Q210 420 430 452 T800 446 V500 H0 Z" fill="#3f8a3f"/>
+
+  <!-- gate booth -->
+  <g transform="translate(560 300)">
+    <rect x="0" y="0" width="110" height="120" rx="6" fill="#e9e2d4" stroke="#6b5a45" stroke-width="3"/>
+    <path d="M-10 0 L55 -36 L120 0 Z" fill="#c94f3d" stroke="#8a3427" stroke-width="3"/>
+    <rect x="18" y="22" width="74" height="44" rx="4" fill="#bfe0ff" stroke="#6b5a45" stroke-width="3"/>
+    <rect x="12" y="82" width="86" height="26" rx="4" fill="#fffdf5" stroke="#6b5a45" stroke-width="2"/>
+    <text x="55" y="100" font-family="Menlo, monospace" font-size="14" font-weight="bold" fill="#6b5a45" text-anchor="middle">GATE</text>
+    <!-- little robot guard peeking out, surprised -->
+    <rect x="34" y="34" width="42" height="32" rx="8" fill="#9aa7b4"/>
+    <circle cx="47" cy="48" r="5" fill="#ffffff"/><circle cx="47" cy="48" r="2.5" fill="#1d2833"/>
+    <circle cx="63" cy="48" r="5" fill="#ffffff"/><circle cx="63" cy="48" r="2.5" fill="#1d2833"/>
+    <ellipse cx="55" cy="60" rx="4" ry="3" fill="#1d2833"/>
+    <line x1="55" y1="34" x2="55" y2="26" stroke="#6b7783" stroke-width="3"/>
+    <circle cx="55" cy="24" r="4" fill="#ff6b5a"/>
+  </g>
+
+  <!-- boom barrier, lifted -->
+  <g transform="translate(548 392)">
+    <rect x="-14" y="-12" width="28" height="40" rx="4" fill="#6b5a45"/>
+    <g transform="rotate(62)">
+      <rect x="-260" y="-8" width="260" height="16" rx="8" fill="#ffffff" stroke="#6b5a45" stroke-width="2"/>
+      <rect x="-230" y="-8" width="30" height="16" fill="#d94b4b"/>
+      <rect x="-170" y="-8" width="30" height="16" fill="#d94b4b"/>
+      <rect x="-110" y="-8" width="30" height="16" fill="#d94b4b"/>
+      <rect x="-50" y="-8" width="30" height="16" fill="#d94b4b"/>
+    </g>
+  </g>
+
+  <!-- dotted flight path over the gate -->
+  <path d="M120 330 Q260 300 330 250" fill="none" stroke="#2f5d8a" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
+
+  <!-- capybara -->
+  <g transform="translate(400 215) rotate(-10)">
+    <!-- cape -->
+    <path d="M-70 -30 Q-170 -45 -190 20 Q-150 5 -135 30 Q-110 0 -60 10 Z" fill="#6a4fc9"/>
+    <path d="M-70 -30 Q-120 -30 -150 0" fill="none" stroke="#4e389e" stroke-width="3"/>
+    <!-- back legs -->
+    <ellipse cx="-95" cy="38" rx="34" ry="13" fill="#7a4e27" transform="rotate(12 -95 38)"/>
+    <!-- body -->
+    <ellipse cx="0" cy="0" rx="112" ry="56" fill="url(#fur)"/>
+    <!-- member badge on the chest -->
+    <g transform="translate(30 6)">
+      <circle r="20" fill="url(#gold)" stroke="#a87a10" stroke-width="3"/>
+      <text y="6" font-family="Menlo, monospace" font-size="16" font-weight="bold" fill="#7a5a08" text-anchor="middle">W</text>
+    </g>
+    <!-- front legs holding the key -->
+    <ellipse cx="70" cy="46" rx="30" ry="11" fill="#7a4e27" transform="rotate(25 70 46)"/>
+    <ellipse cx="40" cy="50" rx="28" ry="11" fill="#7a4e27" transform="rotate(35 40 50)"/>
+    <!-- head -->
+    <ellipse cx="108" cy="-22" rx="56" ry="42" fill="url(#fur)"/>
+    <rect x="128" y="-34" width="48" height="40" rx="18" fill="#9a6838"/>
+    <ellipse cx="170" cy="-18" rx="5" ry="4" fill="#3d2814"/>
+    <path d="M150 -2 Q162 8 174 -2" fill="none" stroke="#3d2814" stroke-width="3" stroke-linecap="round"/>
+    <!-- ears -->
+    <ellipse cx="78" cy="-58" rx="11" ry="9" fill="#7a4e27"/>
+    <ellipse cx="104" cy="-62" rx="11" ry="9" fill="#7a4e27"/>
+    <!-- eye, half closed and smug -->
+    <circle cx="122" cy="-34" r="6" fill="#2a1a0c"/>
+    <circle cx="124" cy="-36" r="2" fill="#ffffff"/>
+    <path d="M114 -40 Q122 -44 130 -40" fill="none" stroke="#5a3a1a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- golden key labelled write -->
+    <g transform="translate(70 88) rotate(-6)">
+      <circle cx="-30" cy="0" r="20" fill="none" stroke="url(#gold)" stroke-width="10"/>
+      <rect x="-12" y="-6" width="96" height="12" rx="4" fill="url(#gold)"/>
+      <rect x="62" y="4" width="10" height="18" fill="url(#gold)"/>
+      <rect x="78" y="4" width="8" height="12" fill="url(#gold)"/>
+      <text x="34" y="-14" font-family="Menlo, monospace" font-size="15" font-weight="bold" fill="#2f5d8a" text-anchor="middle">write</text>
+    </g>
+  </g>
+</svg>
