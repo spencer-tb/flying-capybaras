@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb98a"/>
+      <stop offset="0.55" stop-color="#ffd9b8"/>
+      <stop offset="1" stop-color="#fff1e3"/>
+    </linearGradient>
+    <radialGradient id="fur" cx="0.45" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#b07a45"/>
+      <stop offset="1" stop-color="#8a5a2e"/>
+    </radialGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8cc46f"/>
+      <stop offset="1" stop-color="#5a9e4c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- setting sun -->
+  <circle cx="110" cy="120" r="50" fill="#fff0a0"/>
+  <circle cx="110" cy="120" r="72" fill="#fff0a0" opacity="0.3"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.9">
+    <circle cx="560" cy="70" r="20"/><circle cx="586" cy="58" r="26"/>
+    <circle cx="614" cy="70" r="19"/><rect x="544" y="70" width="86" height="18" rx="9"/>
+    <circle cx="300" cy="52" r="16"/><circle cx="320" cy="44" r="20"/>
+    <circle cx="342" cy="54" r="15"/><rect x="288" y="54" width="68" height="14" rx="7"/>
+  </g>
+
+  <!-- hills -->
+  <path d="M0 420 Q170 370 340 408 T660 392 T800 412 V500 H0 Z" fill="url(#hill)"/>
+  <path d="M0 456 Q220 424 440 452 T800 448 V500 H0 Z" fill="#478f40"/>
+
+  <!-- gate booth on the right -->
+  <g transform="translate(600 300)">
+    <rect x="0" y="0" width="110" height="120" rx="6" fill="#e9e2d4" stroke="#6b5a45" stroke-width="3"/>
+    <path d="M-10 0 L55 -36 L120 0 Z" fill="#c94f3d" stroke="#8a3427" stroke-width="3"/>
+    <rect x="18" y="22" width="74" height="44" rx="4" fill="#bfe0ff" stroke="#6b5a45" stroke-width="3"/>
+    <rect x="12" y="82" width="86" height="26" rx="4" fill="#fffdf5" stroke="#6b5a45" stroke-width="2"/>
+    <text x="55" y="100" font-family="Menlo, monospace" font-size="14" font-weight="bold" fill="#6b5a45" text-anchor="middle">GATE</text>
+    <!-- robot guard, happy this time -->
+    <rect x="34" y="34" width="42" height="32" rx="8" fill="#9aa7b4"/>
+    <path d="M42 47 Q47 42 52 47" fill="none" stroke="#1d2833" stroke-width="3" stroke-linecap="round"/>
+    <path d="M58 47 Q63 42 68 47" fill="none" stroke="#1d2833" stroke-width="3" stroke-linecap="round"/>
+    <path d="M47 56 Q55 63 63 56" fill="none" stroke="#1d2833" stroke-width="3" stroke-linecap="round"/>
+    <line x1="55" y1="34" x2="55" y2="26" stroke="#6b7783" stroke-width="3"/>
+    <circle cx="55" cy="24" r="4" fill="#5ac46b"/>
+    <!-- waving arm -->
+    <path d="M-2 50 Q-26 40 -30 16" fill="none" stroke="#9aa7b4" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="-31" cy="12" r="7" fill="#9aa7b4"/>
+  </g>
+
+  <!-- boom barrier, lifted -->
+  <g transform="translate(588 392)">
+    <rect x="-14" y="-12" width="28" height="40" rx="4" fill="#6b5a45"/>
+    <g transform="rotate(62)">
+      <rect x="-260" y="-8" width="260" height="16" rx="8" fill="#ffffff" stroke="#6b5a45" stroke-width="2"/>
+      <rect x="-230" y="-8" width="30" height="16" fill="#d94b4b"/>
+      <rect x="-170" y="-8" width="30" height="16" fill="#d94b4b"/>
+      <rect x="-110" y="-8" width="30" height="16" fill="#d94b4b"/>
+      <rect x="-50" y="-8" width="30" height="16" fill="#d94b4b"/>
+    </g>
+  </g>
+
+  <!-- dotted flight path -->
+  <path d="M30 390 Q120 350 190 290" fill="none" stroke="#9a5a2e" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
+
+  <!-- capybara with wings carrying the guest list -->
+  <g transform="translate(290 220) rotate(-8)">
+    <!-- far wing -->
+    <path d="M-20 -40 Q-40 -150 40 -170 Q20 -120 50 -100 Q30 -80 40 -50 Z" fill="#f4f0ff" stroke="#b9acd9" stroke-width="3"/>
+    <!-- back legs -->
+    <ellipse cx="-90" cy="36" rx="32" ry="12" fill="#7a4e27" transform="rotate(12 -90 36)"/>
+    <!-- body -->
+    <ellipse cx="0" cy="0" rx="108" ry="54" fill="url(#fur)"/>
+    <!-- near wing -->
+    <path d="M-50 -30 Q-120 -140 -40 -175 Q-50 -125 -15 -110 Q-35 -85 -10 -55 Z" fill="#ffffff" stroke="#b9acd9" stroke-width="3"/>
+    <path d="M-40 -60 Q-60 -110 -40 -150" fill="none" stroke="#d6cdee" stroke-width="3"/>
+    <!-- front legs -->
+    <ellipse cx="68" cy="44" rx="28" ry="11" fill="#7a4e27" transform="rotate(25 68 44)"/>
+    <ellipse cx="38" cy="48" rx="26" ry="11" fill="#7a4e27" transform="rotate(35 38 48)"/>
+    <!-- head -->
+    <ellipse cx="104" cy="-22" rx="54" ry="40" fill="url(#fur)"/>
+    <rect x="124" y="-34" width="46" height="38" rx="17" fill="#9a6838"/>
+    <ellipse cx="164" cy="-18" rx="5" ry="4" fill="#3d2814"/>
+    <path d="M144 -2 Q156 8 168 -2" fill="none" stroke="#3d2814" stroke-width="3" stroke-linecap="round"/>
+    <!-- ears -->
+    <ellipse cx="76" cy="-56" rx="11" ry="9" fill="#7a4e27"/>
+    <ellipse cx="100" cy="-60" rx="11" ry="9" fill="#7a4e27"/>
+    <!-- eye -->
+    <circle cx="118" cy="-32" r="6" fill="#2a1a0c"/>
+    <circle cx="120" cy="-34" r="2" fill="#ffffff"/>
+
+    <!-- guest list scroll held in front paws -->
+    <g transform="translate(36 78) rotate(6)">
+      <rect x="0" y="0" width="150" height="112" rx="4" fill="#fffbea" stroke="#a88a4a" stroke-width="3"/>
+      <rect x="-6" y="-8" width="162" height="14" rx="7" fill="#e8d6a0" stroke="#a88a4a" stroke-width="2"/>
+      <rect x="-6" y="106" width="162" height="14" rx="7" fill="#e8d6a0" stroke="#a88a4a" stroke-width="2"/>
+      <text x="75" y="24" font-family="Menlo, monospace" font-size="13" font-weight="bold" fill="#6b5a45" text-anchor="middle">BYPASS LIST</text>
+      <g font-family="Menlo, monospace" font-size="12" fill="#6b5a45">
+        <text x="12" y="46">· · · · · · ·</text>
+        <text x="12" y="66" fill="#2e8a43" font-weight="bold">+ one more</text>
+        <text x="12" y="84" fill="#2e8a43" font-weight="bold">+ one more</text>
+        <text x="12" y="102" fill="#2e8a43" font-weight="bold">+ one more</text>
+      </g>
+    </g>
+  </g>
+</svg>
