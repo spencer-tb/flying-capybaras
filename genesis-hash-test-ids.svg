@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd3ff"/>
+      <stop offset="1" stop-color="#e6f6ff"/>
+    </linearGradient>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b07a4a"/>
+      <stop offset="1" stop-color="#8a5a33"/>
+    </linearGradient>
+    <g id="block">
+      <path d="M0 18 L28 4 L56 18 L28 32 Z" fill="#ffe08a" stroke="#a87b00" stroke-width="2"/>
+      <path d="M0 18 L28 32 L28 66 L0 52 Z" fill="#f2b632" stroke="#a87b00" stroke-width="2"/>
+      <path d="M56 18 L28 32 L28 66 L56 52 Z" fill="#d99a1a" stroke="#a87b00" stroke-width="2"/>
+    </g>
+    <marker id="head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#e8644a"/>
+    </marker>
+  </defs>
+
+  <!-- sky and clouds -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="110" cy="70" rx="60" ry="22"/>
+    <ellipse cx="150" cy="60" rx="40" ry="18"/>
+    <ellipse cx="660" cy="80" rx="64" ry="22"/>
+    <ellipse cx="700" cy="70" rx="40" ry="16"/>
+  </g>
+
+  <!-- the flying capybara, swapping the two tags -->
+  <g transform="translate(200 30)">
+    <path d="M70 40 C 40 -30, 130 -40, 140 30 Z" fill="#f4f8ff" stroke="#9fb3c8" stroke-width="3"/>
+    <ellipse cx="100" cy="85" rx="95" ry="55" fill="url(#fur)"/>
+    <ellipse cx="55" cy="132" rx="16" ry="10" fill="#7a4d2b"/>
+    <ellipse cx="140" cy="134" rx="16" ry="10" fill="#7a4d2b"/>
+    <path d="M165 50 C 215 40, 250 70, 245 100 C 240 125, 200 128, 170 118 Z" fill="url(#fur)"/>
+    <ellipse cx="236" cy="96" rx="14" ry="12" fill="#6b4226"/>
+    <ellipse cx="240" cy="92" rx="4" ry="3" fill="#2b1a10"/>
+    <circle cx="206" cy="74" r="6" fill="#2b1a10"/>
+    <circle cx="208" cy="72" r="2" fill="#ffffff"/>
+    <ellipse cx="184" cy="52" rx="10" ry="7" fill="#6b4226"/>
+    <path d="M218 108 Q 228 114 236 108" fill="none" stroke="#2b1a10" stroke-width="2" stroke-linecap="round"/>
+    <path d="M90 60 C 60 -20, 175 -25, 170 55 Z" fill="#ffffff" stroke="#9fb3c8" stroke-width="3"/>
+    <path d="M110 30 Q 130 18 150 28 M108 45 Q 132 34 158 44" fill="none" stroke="#c9d6e3" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <rect x="0" y="420" width="800" height="80" fill="#9ad37a"/>
+
+  <!-- swap arrows between the two tags -->
+  <line x1="238" y1="274" x2="340" y2="274" stroke="#e8644a" stroke-width="5" stroke-linecap="round" marker-end="url(#head)"/>
+  <line x1="346" y1="294" x2="244" y2="294" stroke="#e8644a" stroke-width="5" stroke-linecap="round" marker-end="url(#head)"/>
+  <text x="292" y="258" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#c2452e" text-anchor="middle">swap</text>
+
+  <g font-family="Courier New, monospace" font-size="13" font-weight="bold" text-anchor="middle">
+    <!-- one empty block -->
+    <use xlink:href="#block" transform="translate(100 316) scale(1.6)"/>
+    <g transform="translate(60 268)">
+      <rect width="164" height="30" rx="8" fill="#ffffff" stroke="#5b8def" stroke-width="3"/>
+      <circle cx="12" cy="15" r="4" fill="#5b8def"/>
+      <text x="88" y="20" fill="#24427a">one_empty_block</text>
+    </g>
+
+    <!-- one block with a tx -->
+    <use xlink:href="#block" transform="translate(400 316) scale(1.6)"/>
+    <g transform="translate(410 360) skewY(26)">
+      <rect width="30" height="20" fill="#ffffff" stroke="#8a6a00" stroke-width="2"/>
+      <path d="M0 0 L15 11 L30 0" fill="none" stroke="#8a6a00" stroke-width="2"/>
+    </g>
+    <g transform="translate(360 268)">
+      <rect width="164" height="30" rx="8" fill="#ffffff" stroke="#5b8def" stroke-width="3"/>
+      <circle cx="12" cy="15" r="4" fill="#5b8def"/>
+      <text x="88" y="20" fill="#24427a">one_block_with_tx</text>
+    </g>
+
+    <!-- 256 empty blocks, the only slow one -->
+    <use xlink:href="#block" transform="translate(690 330) scale(1.1)"/>
+    <use xlink:href="#block" transform="translate(665 342) scale(1.1)"/>
+    <use xlink:href="#block" transform="translate(640 354) scale(1.1)"/>
+    <g transform="translate(612 268)">
+      <rect width="164" height="30" rx="8" fill="#ffffff" stroke="#7b61c9" stroke-width="3"/>
+      <circle cx="12" cy="15" r="4" fill="#7b61c9"/>
+      <text x="88" y="20" fill="#4a3590">256_empty_blocks</text>
+    </g>
+    <!-- a snail riding the long chain -->
+    <g transform="translate(668 336)">
+      <ellipse cx="18" cy="20" rx="22" ry="6" fill="#9fd27a" stroke="#4d7a2f" stroke-width="2"/>
+      <circle cx="14" cy="8" r="12" fill="#e8a05a" stroke="#8a5a2b" stroke-width="2"/>
+      <path d="M14 8 m-6 0 a6 6 0 1 0 6 -6" fill="none" stroke="#8a5a2b" stroke-width="2"/>
+      <line x1="34" y1="16" x2="40" y2="4" stroke="#4d7a2f" stroke-width="2"/>
+      <circle cx="40" cy="4" r="2.5" fill="#4d7a2f"/>
+    </g>
+    <text x="694" y="318" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#4a3590">slow</text>
+  </g>
+
+  <text x="400" y="472" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#2d5a1f" text-anchor="middle">right tags on the right blocks, and only the long one is slow</text>
+</svg>

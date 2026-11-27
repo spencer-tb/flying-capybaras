@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fd3ff"/>
+      <stop offset="1" stop-color="#e6f6ff"/>
+    </linearGradient>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b07a4a"/>
+      <stop offset="1" stop-color="#8a5a33"/>
+    </linearGradient>
+    <g id="box">
+      <path d="M0 18 L28 4 L56 18 L28 32 Z" fill="#e2b77a" stroke="#8a5a2b" stroke-width="2"/>
+      <path d="M0 18 L28 32 L28 66 L0 52 Z" fill="#c8924f" stroke="#8a5a2b" stroke-width="2"/>
+      <path d="M56 18 L28 32 L28 66 L56 52 Z" fill="#a8763d" stroke="#8a5a2b" stroke-width="2"/>
+      <path d="M14 11 L42 25" stroke="#f4e3b5" stroke-width="5"/>
+    </g>
+  </defs>
+
+  <!-- sky and clouds -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="560" cy="70" rx="64" ry="22"/>
+    <ellipse cx="600" cy="60" rx="42" ry="18"/>
+    <ellipse cx="300" cy="50" rx="50" ry="16"/>
+  </g>
+
+  <!-- the old packing crate, dropped and tumbling away -->
+  <g transform="translate(60 120) rotate(-20)">
+    <rect x="0" y="20" width="150" height="100" rx="4" fill="#c8924f" stroke="#7a4d2b" stroke-width="3"/>
+    <g stroke="#9a6a38" stroke-width="2">
+      <line x1="0" y1="53" x2="150" y2="53"/><line x1="0" y1="86" x2="150" y2="86"/>
+    </g>
+    <path d="M0 20 L-30 -30 L120 -40 L150 20 Z" fill="#e2b77a" stroke="#7a4d2b" stroke-width="3"/>
+    <text x="75" y="80" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#5a3412" text-anchor="middle">PACKED</text>
+    <path d="M150 70 C 175 60, 170 100, 200 92 C 225 85, 220 120, 245 112" fill="none" stroke="#f4e3b5" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <line x1="40" y1="250" x2="20" y2="285"/><line x1="80" y1="262" x2="66" y2="292"/><line x1="120" y1="268" x2="110" y2="294"/>
+  </g>
+
+  <!-- dotted flight path -->
+  <path d="M250 205 C 290 190, 320 200, 345 210" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
+
+  <!-- the flying capybara -->
+  <g transform="translate(330 110)">
+    <path d="M70 40 C 40 -30, 130 -40, 140 30 Z" fill="#f4f8ff" stroke="#9fb3c8" stroke-width="3"/>
+    <ellipse cx="100" cy="85" rx="95" ry="55" fill="url(#fur)"/>
+    <ellipse cx="55" cy="132" rx="16" ry="10" fill="#7a4d2b"/>
+    <ellipse cx="140" cy="134" rx="16" ry="10" fill="#7a4d2b"/>
+    <path d="M165 50 C 215 40, 250 70, 245 100 C 240 125, 200 128, 170 118 Z" fill="url(#fur)"/>
+    <ellipse cx="236" cy="96" rx="14" ry="12" fill="#6b4226"/>
+    <ellipse cx="240" cy="92" rx="4" ry="3" fill="#2b1a10"/>
+    <circle cx="206" cy="74" r="6" fill="#2b1a10"/>
+    <circle cx="208" cy="72" r="2" fill="#ffffff"/>
+    <ellipse cx="184" cy="52" rx="10" ry="7" fill="#6b4226"/>
+    <path d="M218 108 Q 228 114 236 108" fill="none" stroke="#2b1a10" stroke-width="2" stroke-linecap="round"/>
+    <path d="M90 60 C 60 -20, 175 -25, 170 55 Z" fill="#ffffff" stroke="#9fb3c8" stroke-width="3"/>
+    <path d="M110 30 Q 130 18 150 28 M108 45 Q 132 34 158 44" fill="none" stroke="#c9d6e3" stroke-width="3" stroke-linecap="round"/>
+    <use xlink:href="#box" x="232" y="112"/>
+    <path d="M222 120 Q 232 128 240 124" fill="none" stroke="#7a4d2b" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- every group on the ground, each one in its own box -->
+  <rect x="0" y="420" width="800" height="80" fill="#9ad37a"/>
+  <use xlink:href="#box" transform="translate(150 340) scale(1.2)"/>
+  <use xlink:href="#box" transform="translate(250 340) scale(1.2)"/>
+  <use xlink:href="#box" transform="translate(350 340) scale(1.2)"/>
+  <use xlink:href="#box" transform="translate(450 340) scale(1.2)"/>
+  <use xlink:href="#box" transform="translate(550 340) scale(1.2)"/>
+  <use xlink:href="#box" transform="translate(650 340) scale(1.2)"/>
+
+  <text x="400" y="472" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#2d5a1f" text-anchor="middle">no more packing: each pre-alloc group stays as it was filled</text>
+</svg>
